@@ -8,10 +8,17 @@ function Projects(props) {
     <div>
       <h1>Projects</h1>
       <Thumbnail
-        link=""
-        image=""
-        title=""
-        category=""
+        link="/twitter"
+        image="http://twitter-image-url.jpg"
+        title="Twitter Newsfeed"
+        category="Mobile  App"
+      />
+
+      <Thumbnail
+        link="/airbnb"
+        image="http://airbnb-image-url.jpg"
+        title="Airbnb Experiences"
+        category="Website"
       />
     </div>
   )
