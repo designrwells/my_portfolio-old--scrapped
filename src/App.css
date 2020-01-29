@@ -13,19 +13,12 @@
   text-decoration: none;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.stick + .content {
-  padding-top: 60px;
-}
-
-.heading {
+.header {
   text-align: center;
-  padding: 25px 0px;
+  padding: 28px 0px 0px 0;
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 25px;
+  font: 2em 'Cairo', sans-serif;
 }
 
 .body-wrapper {

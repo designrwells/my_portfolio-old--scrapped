@@ -6,7 +6,7 @@ import '../App.css';
 function ProjectItem(props) {
   return (
 
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', height: '30%' }}>
           <div className="project">
             <Link to={props.link}>
               <Card.Img variant="top" className="project-img" src={props.image} />

@@ -8,10 +8,10 @@ class Projects extends Component {
     return (
       // Render a Thumbnail component
       <div className="body-wrapper">
-        <h1 className="heading">Projects</h1>
+        <h1 className="header">PROJECTS</h1>
         <CardDeck>
           <ProjectItem
-            link="/twitter"
+            link="/ulysses"
             image="http://darrinwells.com/img/ulysses.jpg"
             title="Ulysses"
             category="Photoshop"
@@ -19,10 +19,13 @@ class Projects extends Component {
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
           <ProjectItem
-            link="/airbnb"
-            image="http://airbnb-image-url.jpg"
-            title="Airbnb Experiences"
-            category="Website"
+            link="/mendedmoments"
+            image="http://darrinwells.com/img/thumbnails/mendedmoments_thumb.jpg"
+            title="Mended Moments"
+            category="Website Design"
+            category="Graphic Design"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           />
           <ProjectItem
             link="/airbnb"
