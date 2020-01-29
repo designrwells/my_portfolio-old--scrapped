@@ -22,3 +22,29 @@
 .stick + .content {
   padding-top: 60px;
 }
+
+.heading {
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.body-wrapper {
+  margin: 0 8% ;
+}
+
+/*---Project Component---*/
+.card {
+  
+}
+.project a {
+  text-decoration: none;
+}
+.project-img {
+
+}
+.project-title {
+
+}
+.project-text {
+  color: #555;
+}
