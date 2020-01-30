@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import SlideView from './components/SlideView/index.js';
+import styled from 'styled-components';
 import Projects from './components/Projects.js';
 import Articles from './components/Articles.js';
 import About from './components/About.js';
 import './App.css';
 
+const AppWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 class App extends Component {
  render() {
   return (
+
+    <AppWrapper>
+      <SlideView />
+    </AppWrapper>
     
-  <BrowserRouter>
+ /* <BrowserRouter>
     <div className="App">
 
         <Navbar expand="lg" bg="dark" sticky="top">
@@ -34,7 +45,7 @@ class App extends Component {
         </Switch>
 
     </div>
-  </BrowserRouter>
+  </BrowserRouter> */
    
   );
  }
