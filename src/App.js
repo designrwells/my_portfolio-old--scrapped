@@ -1,54 +1,44 @@
 import React, { Component } from 'react';
-import { Nav, Navbar } from 'react-bootstrap';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import SlideView from './components/SlideView/index.js';
-import styled from 'styled-components';
-import Projects from './components/Projects.js';
-import Articles from './components/Articles.js';
-import About from './components/About.js';
-import './App.css';
-
-const AppWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Transition, TransitionGroup } from 'react-transition-group';
+import { play, exit } from './timelines'
+import Nav from './Nav'
+import Projects from './components/Projects'
+import About from './components/About'
+import Articles from './components/Articles'
 
 class App extends Component {
- render() {
-  return (
 
-    <AppWrapper>
-      <SlideView />
-    </AppWrapper>
-    
- /* <BrowserRouter>
-    <div className="App">
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="app">
+          <Nav/>
+          <Route render={({ location }) => {
+            const { pathname, key } = location;
 
-        <Navbar expand="lg" bg="dark" sticky="top">
-          <Navbar.Brand href="#home">React-Bootstrap Portfolio</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse className="justify-content-end">
-
-            <Nav>
-                <Link to="/" className="nav-item">Projects</Link>                         
-                <Link to="/articles" className="nav-item">Articles</Link>      
-                <Link to="about" className="nav-item">About</Link>
-            </Nav>
-
-          </Navbar.Collapse>
-        </Navbar>
-
-        <Switch>
-          <Route exact path="/" component={Projects} />
-          <Route path="/articles" component={Articles} />
-          <Route path="/about" component={About} />
-        </Switch>
-
-    </div>
-  </BrowserRouter> */
-   
-  );
- }
+            return (
+              <TransitionGroup component={null}>
+                <Transition
+                  key={key}
+                  appear={true}
+                  onEnter={(node, appears) => play(pathname, node, appears)}
+                  onExit={(node, appears) => exit(node, appears)}
+                  timeout={{enter: 750, exit: 150}}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Projects}/>
+                    <Route path="/articles" component={Articles} />
+                    <Route path="/about" component={About} />
+                  </Switch>
+                </Transition>
+              </TransitionGroup>
+            )
+          }}/>
+        </div>
+      </BrowserRouter>
+    )
+  }
 }
-
-export default App;
+  
+  export default App;
