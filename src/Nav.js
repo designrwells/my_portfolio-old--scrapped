@@ -2,9 +2,11 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const routes = [
-  { to: '/', label: 'About' },
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/skills', label: 'Skills' },
   { to: '/projects', label: 'Projects' },
-  { to: '/articles', label: 'Articles' }
+  { to: '/contact', label: 'Contact' }
 ];
 
 const Nav = () => {

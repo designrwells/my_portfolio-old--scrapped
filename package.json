@@ -11,6 +11,7 @@
     "framer-motion": "^1.8.0",
     "gsap": "^3.1.1",
     "react": "^16.12.0",
+    "react-awesome-slider": "^4.0.1",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-router-bootstrap": "^0.25.0",
