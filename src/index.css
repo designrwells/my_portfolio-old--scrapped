@@ -55,7 +55,7 @@ nav {
   background-color: #444;
   justify-content: end;
   opacity: 0;
-  padding: 1.5em;
+  padding: 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -67,8 +67,8 @@ nav {
 nav a {
   color: white;
   font-weight: 400;
-  font-size: 1.25em;
-  margin: 0 1.7em;
+  font-size: 1.1em;
+  margin: 0 .7em;
   letter-spacing: 0.1em;
   position: relative;
   text-decoration: none;
@@ -116,5 +116,58 @@ nav a.active:before {
   font-weight: 400;
 }
 
+.body-wrapper {
+	background: #444;
+	padding: 5% 8% 10% 8%;
+}
+.header {
+	color: white;
+ 	text-align: center;
+ 	padding: 28px 0px 0px 0;
+ 	border-bottom: 1px solid #fff;
+ 	margin-bottom: 25px;
+ 	font: 2em 'Cairo', sans-serif;
+ }
+/**
+ * ----------------------------------------
+ * animation pulsate-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.pulsate-bck {
+	-webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+	        animation: pulsate-bck 2s ease-in-out infinite both;
+}
 
-
+.anim-text {
+	color: white;
+	text-align: center;
+	font-size: 18em;
+}
