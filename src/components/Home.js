@@ -1,47 +1,53 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
  
-class Home extends Component {
 
 
+function Home() {
 
-render() {
 
+	return (
+		<div className="body-wrapper">
+			<div className="page-content-wrapper">
 
-	  return (
-<div className="body-wrapper">
-	<div className="page-content-wrapper">
-		<Carousel>
+				<Carousel 
+					pauseOnHover={true}
+					touch={true}
+					controls={false}
+					interval={20}
+					fade={true}
+					wrap={true}
+					>
 
-		  <Carousel.Item>
-		    <div className="pulsate-bck">
-	      		<div className="anim-text">Test1</div>
-	      	</div>
-		    <Carousel.Caption>
-		    </Carousel.Caption>
-		  </Carousel.Item>
+				  <Carousel.Item>
+				    <div className="pulsate-bck">
+			      		<div className="anim-text">Test1</div>
+			      	</div>
+				    <Carousel.Caption>
+				    </Carousel.Caption>
+				  </Carousel.Item>
 
-		  <Carousel.Item>
-		    <div className="pulsate-bck">
-	      		<div className="anim-text">Test2</div>
-	      	</div>
-		    <Carousel.Caption>
-		    </Carousel.Caption>
-		  </Carousel.Item>
+				  <Carousel.Item>
+				    <div className="pulsate-bck">
+			      		<div className="anim-text">Test2</div>
+			      	</div>
+				    <Carousel.Caption>
+				    </Carousel.Caption>
+				  </Carousel.Item>
 
-		  <Carousel.Item>
-		    <div className="pulsate-bck">
-	      		<div className="anim-text">Test3</div>
-	      	</div>
-		    <Carousel.Caption>
-		    </Carousel.Caption>
-		  </Carousel.Item>
+				  <Carousel.Item>
+				    <div className="pulsate-bck">
+			      		<div className="anim-text">Test3</div>
+			      	</div>
+				    <Carousel.Caption>
+				    </Carousel.Caption>
+				  </Carousel.Item>
 
-		</Carousel>
-	</div>
-</div>
-	  )
-	}
-}
+				</Carousel>
+			</div>
+		</div>
+			  )
+			}
+		
 export default Home;

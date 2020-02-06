@@ -171,3 +171,6 @@ nav a.active:before {
 	text-align: center;
 	font-size: 18em;
 }
+.carousel-indicators li {
+	background-clip: none;
+}
