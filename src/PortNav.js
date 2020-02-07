@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar'
 
 const routes = [
   { to: '/', label: 'Home' },
@@ -9,12 +10,12 @@ const routes = [
   { to: '/contact', label: 'Contact' }
 ];
 
-const Nav = () => {
+const PortNav = () => {
   const links = routes.map(({ to, label }) => {
     return <NavLink strict exact to={to} key={to}>{label}</NavLink>}
   )
 
-  return <nav>{ links }</nav>;
+  return <Navbar className="justify-content-end">{ links }</Navbar>;
 }
 
-export default Nav
+export default PortNav

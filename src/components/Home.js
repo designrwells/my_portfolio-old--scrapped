@@ -15,8 +15,6 @@ function Home() {
 					pauseOnHover={true}
 					touch={true}
 					controls={false}
-					interval={20}
-					fade={true}
 					wrap={true}
 					>
 
@@ -39,6 +37,22 @@ function Home() {
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
 			      		<div className="anim-text">Test3</div>
+			      	</div>
+				    <Carousel.Caption>
+				    </Carousel.Caption>
+				  </Carousel.Item>
+
+				  <Carousel.Item>
+				    <div className="pulsate-bck">
+			      		<div className="anim-text">Test4</div>
+			      	</div>
+				    <Carousel.Caption>
+				    </Carousel.Caption>
+				  </Carousel.Item>
+
+				  <Carousel.Item>
+				    <div className="pulsate-bck">
+			      		<div className="anim-text">Test5</div>
 			      	</div>
 				    <Carousel.Caption>
 				    </Carousel.Caption>

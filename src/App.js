@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, TransitionGroup } from 'react-transition-group';
 import { play, exit } from './timelines'
-import Nav from './Nav'
+import PortNav from './PortNav'
 import Projects from './components/Projects'
 import About from './components/About'
 import Skills from './components/Skills'
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <Nav/>
+          <PortNav/>
           <Route render={({ location }) => {
             const { pathname, key } = location;
 
