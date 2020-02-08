@@ -9,7 +9,7 @@ function Home() {
 
 	return (
 		<div className="body-wrapper">
-			<div className="page-content-wrapper">
+			<div id="carousel-wrapper" className="page-content-wrapper">
 
 				<Carousel 
 					pauseOnHover={true}
@@ -20,41 +20,46 @@ function Home() {
 
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
-			      		<div className="anim-text">Test1</div>
+			      		<div className="anim-text">Hey, I'm Darrin</div>
 			      	</div>
 				    <Carousel.Caption>
+				    	That is my name.
 				    </Carousel.Caption>
 				  </Carousel.Item>
 
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
-			      		<div className="anim-text">Test2</div>
+			      		<div className="anim-text">Web wizardry</div>
 			      	</div>
 				    <Carousel.Caption>
+				    	That is my game.
 				    </Carousel.Caption>
 				  </Carousel.Item>
 
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
-			      		<div className="anim-text">Test3</div>
+			      		<div className="anim-text">Here's some text</div>
 			      	</div>
 				    <Carousel.Caption>
+				    	And here's some more text.
 				    </Carousel.Caption>
 				  </Carousel.Item>
 
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
-			      		<div className="anim-text">Test4</div>
+			      		<div className="anim-text">Something else here</div>
 			      	</div>
 				    <Carousel.Caption>
+				    	And one more thing here.
 				    </Carousel.Caption>
 				  </Carousel.Item>
 
 				  <Carousel.Item>
 				    <div className="pulsate-bck">
-			      		<div className="anim-text">Test5</div>
+			      		<div className="anim-text">Final slide</div>
 			      	</div>
 				    <Carousel.Caption>
+				    	Slide on man, slide on.
 				    </Carousel.Caption>
 				  </Carousel.Item>
 
