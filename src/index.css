@@ -240,3 +240,40 @@ nav a.active:before {
             transform-origin: 50% 100%;
   }
 }
+
+
+/*--------ABOUT PAGE-------*/
+.about-wrapper {
+
+}
+.about-header {
+  z-index: 1;
+  text-align: center;
+  position: relative;
+}
+.about-block-left {
+  display: block;
+  background: #fff;
+  margin: 0 auto;
+  padding-left: 80px;
+  position: absolute;
+  z-index: 2;
+  left: 42.5vw;
+  top: 10vh;
+}
+
+.about-block-right {
+  display: block;
+  background: #fff;
+  margin: 0 auto;
+  padding-right: 80px;
+  position: absolute;
+  z-index: 2;
+  right: 42.5vw;
+  top: 10vh;
+}
+
+.about-center {
+  display: inline-block;
+  text-align: center;
+}
