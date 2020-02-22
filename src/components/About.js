@@ -4,10 +4,10 @@ import { TimelineLite, CSSPlugin } from 'gsap';
 import octopusRight from '../images/octopus-right.png';
 import octopusLeft from '../images/octopus-left.png';
 import rope from '../images/rope.png';
-import waveOne from '../images/wave1.png';
-import waveTwo from '../images/wave2.png';
-import waveThree from '../images/wave3.png';
-import waveFour from '../images/wave4.png';
+import waveOne from '../images/wave1-01.png';
+import waveTwo from '../images/wave2-01.png';
+import waveThree from '../images/wave3-01.png';
+import waveFour from '../images/wave4-01.png';
 
 class About extends Component {
 
@@ -23,9 +23,10 @@ class About extends Component {
 			.to(this.aboutContainerRight, 2, { opacity: 0, x: 320 }, '-=2')
 			.to(this.ropeLineTop, 1.5, { opacity: .8, y: -20 }, '-=.7' )
 			.to(this.ropeLineBottom, 1.5, { opacity: .8, y: -20 }, '-=1.5' )
-			.to(this.aboutHeader, 1.5, { opacity: 1, y: 10 }, '-=.3' )
-			.to(this.aboutTextOne, 2, { opacity: 1, y: -20 }, '-=.6' )
-			.to(this.aboutTextTwo, 2, { opacity: 1, y: -20 }, '-=.8' );
+			.to(this.aboutHeader, 2, { opacity: 1, y: 10 }, '-=.4' )
+			.to(this.aboutBackground, 2, { backgroundColor:"rgba(0, 0, 0, .35)" }, '-=2' )
+			.to(this.aboutTextOne, 2, { opacity: 1, y: -17 }, '-=1' )
+			.to(this.aboutTextTwo, 2, { opacity: 1, y: -20 }, '-=1' );
 	}
 
 	render() {
@@ -33,10 +34,11 @@ class About extends Component {
 		    <div className="body-wrapper">
 		    	<div className="about-wrapper" onClick={ () => this.aboutTween.play() }>
 		    		<img src={octopusLeft} className="about-block-left" ref={ img  => this.aboutContainerLeft = img } />
+		    		
 		    		<img src={rope} className="rope-line" ref={ img => this.ropeLineTop = img } />
-		    		<h1 className="about-header" ref={ h1 => this.aboutHeader = h1 }>Ye intruders beware,</h1>
-		    		<div className="about-text-wrapper">
-
+		    		
+		    		<div className="about-text-wrapper" ref={ div => this.aboutBackground = div }>
+						<h1 className="about-header" ref={ h1 => this.aboutHeader = h1 }>Ye intruders beware,</h1>
 		    			<div className="about-text" ref={ div => this.aboutTextOne = div } >
 			    		Born and raised in Oklahoma, and currently residing in the Oklahoma City metro area, I grew up as someone
 			    		who always thought a little differently. I took pride in that, and thus found interests in things outside of 
@@ -52,13 +54,15 @@ class About extends Component {
 						I am more prepared than ever to translate your ideas into a visual identity. So come on, let's create something together.
 						</div>
 		    		</div>
+		    		
 		    		<img src={rope} className="rope-line" ref={ img => this.ropeLineBottom = img } />
+
 		    		<img src={octopusRight} className="about-block-right" ref={ img  => this.aboutContainerRight = img } />
 
-		    		<img src={waveFour} className="oceanwave-right" style={{ bottom: "130px" }} />
-		    		<img src={waveOne} className="oceanwave-left" style={{ bottom: "85px" }} />
-		    		<img src={waveTwo} className="oceanwave-right" style={{ bottom: "15px" }} />
-		    		<img src={waveThree} className="oceanwave-left" style={{ bottom: "-100px" }} />
+		    		<img src={waveFour} className="oceanwave-right" style={{ bottom: "125px" }} />
+		    		<img src={waveTwo} className="oceanwave-left" style={{ bottom: "75px" }} />
+		    		<img src={waveOne} className="oceanwave-right " style={{ bottom: "-35px" }} />
+		    		<img src={waveThree} className="oceanwave-left" style={{ bottom: "-120px" }} />
 		    		
 
 			    </div>

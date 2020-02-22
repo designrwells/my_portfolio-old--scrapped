@@ -246,14 +246,20 @@ nav a.active:before {
 
 /*--------ABOUT PAGE-------*/
 .about-wrapper {
-  height: 1000px;
+
+
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 3;
 }
+
 .about-header {
   z-index: 2;
   opacity: 0;
   text-align: center;
   position: relative;
   font: 4em 'Cairo', sans-serif;
+  color: #eaeaea;
   font-weight: 600;
   margin-top: -40px;
 }
@@ -283,24 +289,28 @@ nav a.active:before {
 }
 .about-text-wrapper {
   position: relative;
-  max-width: 550px;
+  max-width: 800px;
   text-align: center;
   margin: 0 auto;
   z-index: 2;
+  padding: 0 30px 10px 30px;
+  margin-top: 3px;
+  margin-bottom: -12px;
+  border-radius: 5px;
 }
 .about-text {
   padding: 15px 0;
   opacity: 0;
-  color: #ccc;
+  color: #fff;
   font-size: 18px;
-  z-index: 2;
+  z-index: 3;
 }
 .rope-line {
   display: flex;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: auto;
-  max-width: 650px;
+  max-width: 750px;
   height: auto;
   opacity: 0;
   text-align: center;
@@ -314,11 +324,11 @@ nav a.active:before {
   left: 0px;
   z-index: 1;
   position: fixed;
-  width: 2400px;
+  width: 2850px;
   margin: auto;
 
   -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
-          animation: oceanwave-left 6s ease-in-out infinite alternate both;
+          animation: oceanwave-left 7s ease-in-out infinite alternate both;
 }
 @-webkit-keyframes oceanwave-left {
   0% {
@@ -346,10 +356,10 @@ nav a.active:before {
   left: -200px;
   z-index: 1;
   position: fixed;
-  width: 2400px;
+  width: 2850px;
   margin: auto;
 
-  -webkit-animation: oceanwave-right 6s ease-in-out infinite alternate both;
+  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
           animation: oceanwave-right 5s ease-in-out infinite alternate both;
 }
 @-webkit-keyframes oceanwave-right {
