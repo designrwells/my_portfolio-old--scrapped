@@ -1,5 +1,6 @@
 body {
   background: #444;
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -118,6 +119,7 @@ nav a.active:before {
 .body-wrapper {
 	background: #444;
 	padding: 5% 8% 10% 8%;
+  overflow: hidden;
 }
 .header {
 	color: white;
@@ -247,7 +249,7 @@ nav a.active:before {
   height: 1000px;
 }
 .about-header {
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   text-align: center;
   position: relative;
@@ -263,7 +265,7 @@ nav a.active:before {
   height: auto;
   margin: 0 auto;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   right: 50%;
   top: 5%;
 }
@@ -275,28 +277,98 @@ nav a.active:before {
   height: auto;
   margin: 0 auto;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   left: 50%;
   top: 5%;
 }
 .about-text-wrapper {
+  position: relative;
   max-width: 550px;
   text-align: center;
   margin: 0 auto;
+  z-index: 2;
 }
 .about-text {
   padding: 15px 0;
   opacity: 0;
-    color: #ccc;
-     font-size: 18px;
+  color: #ccc;
+  font-size: 18px;
+  z-index: 2;
 }
 .rope-line {
   display: flex;
+  z-index: 2;
   width: 100%;
+  height: auto;
   max-width: 650px;
   height: auto;
   opacity: 0;
   text-align: center;
   position: relative;
   margin: 0 auto;
+}
+
+.oceanwave-left {
+  display: inline-block;
+  overflow: hidden;
+  left: 0px;
+  z-index: 1;
+  position: fixed;
+  width: 2400px;
+  margin: auto;
+
+  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
+          animation: oceanwave-left 6s ease-in-out infinite alternate both;
+}
+@-webkit-keyframes oceanwave-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+@keyframes oceanwave-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+.oceanwave-right {
+  display: inline-block;
+  overflow: hidden;
+  left: -200px;
+  z-index: 1;
+  position: fixed;
+  width: 2400px;
+  margin: auto;
+
+  -webkit-animation: oceanwave-right 6s ease-in-out infinite alternate both;
+          animation: oceanwave-right 5s ease-in-out infinite alternate both;
+}
+@-webkit-keyframes oceanwave-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes oceanwave-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
 }

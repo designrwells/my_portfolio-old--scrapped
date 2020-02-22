@@ -4,6 +4,10 @@ import { TimelineLite, CSSPlugin } from 'gsap';
 import octopusRight from '../images/octopus-right.png';
 import octopusLeft from '../images/octopus-left.png';
 import rope from '../images/rope.png';
+import waveOne from '../images/wave1.png';
+import waveTwo from '../images/wave2.png';
+import waveThree from '../images/wave3.png';
+import waveFour from '../images/wave4.png';
 
 class About extends Component {
 
@@ -50,7 +54,15 @@ class About extends Component {
 		    		</div>
 		    		<img src={rope} className="rope-line" ref={ img => this.ropeLineBottom = img } />
 		    		<img src={octopusRight} className="about-block-right" ref={ img  => this.aboutContainerRight = img } />
+
+		    		<img src={waveFour} className="oceanwave-right" style={{ bottom: "130px" }} />
+		    		<img src={waveOne} className="oceanwave-left" style={{ bottom: "85px" }} />
+		    		<img src={waveTwo} className="oceanwave-right" style={{ bottom: "15px" }} />
+		    		<img src={waveThree} className="oceanwave-left" style={{ bottom: "-100px" }} />
+		    		
+
 			    </div>
+
 		    </div>
 		  )
 		}
