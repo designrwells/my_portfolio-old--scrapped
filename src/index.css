@@ -251,6 +251,9 @@ nav a.active:before {
   opacity: 0;
   text-align: center;
   position: relative;
+  font: 4em 'Cairo', sans-serif;
+  font-weight: 600;
+  margin-top: -40px;
 }
 .about-block-left {
   display: block;
@@ -264,7 +267,6 @@ nav a.active:before {
   right: 50%;
   top: 5%;
 }
-
 .about-block-right {
   display: block;
   width: 50%;
@@ -277,8 +279,24 @@ nav a.active:before {
   left: 50%;
   top: 5%;
 }
-
-.about-center {
-  display: inline-block;
+.about-text-wrapper {
+  max-width: 550px;
   text-align: center;
+  margin: 0 auto;
+}
+.about-text {
+  padding: 15px 0;
+  opacity: 0;
+    color: #ccc;
+     font-size: 18px;
+}
+.rope-line {
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  opacity: 0;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
 }
