@@ -110,7 +110,7 @@ nav a.active:before {
 
 .body-wrapper {
 	background: #444;
-	padding: 5% 8% 10% 8%;
+	padding: 60px 8% 20px 8%;
   overflow: hidden;
 }
 .header {
@@ -238,11 +238,10 @@ nav a.active:before {
 
 /*--------ABOUT PAGE-------*/
 .about-wrapper {
-
-
   max-width: 700px;
   margin: 0 auto;
   z-index: 3;
+  overflow: hidden;
 }
 
 .about-header {
@@ -260,29 +259,31 @@ nav a.active:before {
   display: block;
   width: 50%;
   min-width: 250px;
-  max-width: 425px;
+  max-width: 380px;
   height: auto;
-  margin: 0 auto;
+  margin: 40px auto;
   position: absolute;
   z-index: 10;
   right: 50%;
   top: 5%;
+  cursor: pointer;
 }
 .about-block-right {
   display: block;
   width: 50%;
   min-width: 250px;
-  max-width: 425px;
+  max-width: 380px;
   height: auto;
-  margin: 0 auto;
+  margin: 40px auto;
   position: absolute;
   z-index: 10;
   left: 50%;
   top: 5%;
+  cursor: pointer;
 }
 .about-text-wrapper {
   position: relative;
-  max-width: 800px;
+  max-width: 680px;
   text-align: center;
   margin: 0 auto;
   z-index: 8;
@@ -359,6 +360,7 @@ nav a.active:before {
   bottom: 125px;
   -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
           animation: oceanwave-left 7s ease-in-out infinite alternate both;
+                     
 }
 .bottle {
   width: 160px;
@@ -368,8 +370,10 @@ nav a.active:before {
   bottom: 20px;
   left: 250px;
   z-index: 5;
-  -webkit-animation: bottle-float 5s ease-in-out infinite alternate both;
-          animation: bottle-float 5s ease-in-out infinite alternate both;
+  -webkit-animation: bottle-float 5s ease-in-out infinite alternate both,
+                     bottle-bob 2s ease-in-out infinite alternate both;
+          animation: bottle-float 5s ease-in-out infinite alternate both,
+                     bottle-bob 2s ease-in-out infinite alternate both;
 }
 .bottle:hover {
   z-index: 7;
@@ -417,23 +421,41 @@ nav a.active:before {
 }
 @keyframes bottle-float {
   0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    -webkit-transform: translate(20px, 120px);
-            transform: translate(20px, 120px);
-            transform: rotate(15deg);
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
   }
 }
 @-webkit-keyframes bottle-float {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    -webkit-transform: translateX(0, 0);
+            transform: translateX(0, 0);
   }
   100% {
-    -webkit-transform: translate(1120px, 120px);
-            transform: translate(1120px, 120px);
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+}
+@keyframes bottle-bob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes bottle-bob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
             transform: rotate(15deg);
   }
 }
