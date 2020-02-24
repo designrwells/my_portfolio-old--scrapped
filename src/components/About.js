@@ -8,6 +8,7 @@ import waveOne from '../images/wave1-01.png';
 import waveTwo from '../images/wave2-01.png';
 import waveThree from '../images/wave3-01.png';
 import waveFour from '../images/wave4-01.png';
+import bottle from '../images/bottle.svg';
 
 class About extends Component {
 
@@ -38,7 +39,7 @@ class About extends Component {
 		    		<img src={rope} className="rope-line" ref={ img => this.ropeLineTop = img } />
 		    		
 		    		<div className="about-text-wrapper" ref={ div => this.aboutBackground = div }>
-						<h1 className="about-header" ref={ h1 => this.aboutHeader = h1 }>Ye intruders beware,</h1>
+						<h1 className="about-header" ref={ h1 => this.aboutHeader = h1 }>YE INTRUDERS BEWARE,</h1>
 		    			<div className="about-text" ref={ div => this.aboutTextOne = div } >
 			    		Born and raised in Oklahoma, and currently residing in the Oklahoma City metro area, I grew up as someone
 			    		who always thought a little differently. I took pride in that, and thus found interests in things outside of 
@@ -59,10 +60,11 @@ class About extends Component {
 
 		    		<img src={octopusRight} className="about-block-right" ref={ img  => this.aboutContainerRight = img } />
 
-		    		<img src={waveFour} className="oceanwave-right" style={{ bottom: "125px" }} />
-		    		<img src={waveTwo} className="oceanwave-left" style={{ bottom: "75px" }} />
-		    		<img src={waveOne} className="oceanwave-right " style={{ bottom: "-35px" }} />
-		    		<img src={waveThree} className="oceanwave-left" style={{ bottom: "-120px" }} />
+		    		<img src={waveFour} className="oceanwave-four" style={{ bottom: "125px" }} />
+		    		<img src={waveThree} className="oceanwave-three" style={{ bottom: "75px" }} />
+		    		<img src={waveTwo} className="oceanwave-two " style={{ bottom: "-35px" }} />
+		    		<a href="/"><img src={bottle} className="bottle" /></a>
+		    		<img src={waveOne} className="oceanwave-one" style={{ bottom: "-120px" }} />
 		    		
 
 			    </div>

@@ -18,14 +18,6 @@ code {
     font-size: 14px;
   }
 }
-
-h1 {
-  font-size: 4em;
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 0.03em;
-}
-
 h2 {
   line-height: 1.4;
   margin-top: 1.5em;
@@ -254,14 +246,15 @@ nav a.active:before {
 }
 
 .about-header {
-  z-index: 2;
+  z-index: 8;
   opacity: 0;
   text-align: center;
   position: relative;
-  font: 4em 'Cairo', sans-serif;
+  font-family: 'IM Fell English SC';
+  font-size: 48px;
   color: #eaeaea;
-  font-weight: 600;
   margin-top: -40px;
+  padding: 30px 10px 20px 10px;
 }
 .about-block-left {
   display: block;
@@ -271,7 +264,7 @@ nav a.active:before {
   height: auto;
   margin: 0 auto;
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   right: 50%;
   top: 5%;
 }
@@ -283,7 +276,7 @@ nav a.active:before {
   height: auto;
   margin: 0 auto;
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   left: 50%;
   top: 5%;
 }
@@ -292,7 +285,7 @@ nav a.active:before {
   max-width: 800px;
   text-align: center;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 8;
   padding: 0 30px 10px 30px;
   margin-top: 3px;
   margin-bottom: -12px;
@@ -303,11 +296,11 @@ nav a.active:before {
   opacity: 0;
   color: #fff;
   font-size: 18px;
-  z-index: 3;
+  z-index: 9;
 }
 .rope-line {
   display: flex;
-  z-index: 3;
+  z-index: 9;
   width: 100%;
   height: auto;
   max-width: 750px;
@@ -318,18 +311,70 @@ nav a.active:before {
   margin: 0 auto;
 }
 
-.oceanwave-left {
+
+.oceanwave-one {
   display: inline-block;
   overflow: hidden;
-  left: 0px;
-  z-index: 1;
+  left: -200px;
+  z-index: 6;
   position: fixed;
   width: 2850px;
   margin: auto;
-
+  bottom: -120px;
+  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
+          animation: oceanwave-right 5s ease-in-out infinite alternate both;
+}
+.oceanwave-two {
+  display: inline-block;
+  overflow: hidden;
+  left: 0px;
+  z-index: 5;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: -35px;
   -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
           animation: oceanwave-left 7s ease-in-out infinite alternate both;
 }
+.oceanwave-three {
+  display: inline-block;
+  overflow: hidden;
+  left: -200px;
+  z-index: 4;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: 75px;
+  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
+          animation: oceanwave-right 5s ease-in-out infinite alternate both;
+}
+.oceanwave-four {
+  display: inline-block;
+  overflow: hidden;
+  left: 0px;
+  z-index: 3;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: 125px;
+  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
+          animation: oceanwave-left 7s ease-in-out infinite alternate both;
+}
+.bottle {
+  width: 160px;
+  float: left;
+  position: fixed;
+  margin: auto;
+  bottom: 20px;
+  left: 250px;
+  z-index: 5;
+  -webkit-animation: bottle-float 5s ease-in-out infinite alternate both;
+          animation: bottle-float 5s ease-in-out infinite alternate both;
+}
+.bottle:hover {
+  z-index: 7;
+}
+
 @-webkit-keyframes oceanwave-left {
   0% {
     -webkit-transform: translateX(0);
@@ -350,18 +395,6 @@ nav a.active:before {
             transform: translateX(-100px);
   }
 }
-.oceanwave-right {
-  display: inline-block;
-  overflow: hidden;
-  left: -200px;
-  z-index: 1;
-  position: fixed;
-  width: 2850px;
-  margin: auto;
-
-  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
-          animation: oceanwave-right 5s ease-in-out infinite alternate both;
-}
 @-webkit-keyframes oceanwave-right {
   0% {
     -webkit-transform: translateX(0);
@@ -380,5 +413,27 @@ nav a.active:before {
   100% {
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
+  }
+}
+@keyframes bottle-float {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(20px, 120px);
+            transform: translate(20px, 120px);
+            transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes bottle-float {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(1120px, 120px);
+            transform: translate(1120px, 120px);
+            transform: rotate(15deg);
   }
 }
