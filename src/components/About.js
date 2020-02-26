@@ -20,8 +20,8 @@ class About extends Component {
 	
 	componentDidMount() {
 		this.aboutTween = new TimelineLite({ paused:true })
-			.to(this.aboutContainerLeft, 2, { opacity: 0, x: -320, y: 90, rotation: -20, display: "none" })
-			.to(this.aboutContainerRight, 2, { opacity: 0, x: 320, y:90, rotation: 20, display: "none" }, '-=2')
+			.to(this.aboutContainerLeft, 1, { y: 790, display: "none" })
+			.to(this.aboutContainerRight, 1, { y:790, display: "none" }, '-=1')
 			.to(this.ropeLineTop, 1.5, { opacity: .8, y: -20 }, '-=.7' )
 			.to(this.ropeLineBottom, 1.5, { opacity: .8, y: -20 }, '-=1.5' )
 			.to(this.aboutHeader, 2, { opacity: 1, y: 10 }, '-=.4' )
@@ -60,11 +60,11 @@ class About extends Component {
 
 		    		<img src={octopusRight} className="about-block-right" ref={ img  => this.aboutContainerRight = img } />
 
-		    		<img src={waveFour} className="oceanwave-four" style={{ bottom: "125px" }} />
-		    		<img src={waveThree} className="oceanwave-three" style={{ bottom: "75px" }} />
-		    		<img src={waveTwo} className="oceanwave-two " style={{ bottom: "-35px" }} />
-		    		<a href="/"><img src={bottle} className="bottle" /></a>
-		    		<img src={waveOne} className="oceanwave-one" style={{ bottom: "-120px" }} />
+		    		<img src={waveFour} className="oceanwave-four" />
+		    		<img src={waveThree} className="oceanwave-three" />
+		    		<img src={waveTwo} className="oceanwave-two " />
+		    		<div className="bottle"><a href="/" alt="My Resume"><img src={bottle} /></a></div>
+		    		<img src={waveOne} className="oceanwave-one" />
 		    		
 
 			    </div>
