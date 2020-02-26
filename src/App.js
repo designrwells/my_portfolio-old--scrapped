@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { NavLink, BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, TransitionGroup } from 'react-transition-group';
+import Navbar from 'react-bootstrap/Navbar'
 import { play, exit } from './timelines';
-import PortNav from './PortNav';
 import Projects from './components/Projects';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -15,13 +15,21 @@ import waveFour from './images/wave4-01.png';
 import bottle from './images/bottle.svg';
 
 class App extends Component {
+ 
 
   render() {
     return (
+  
       <BrowserRouter>
         <div className="app">
 
-          <PortNav/>
+          <Navbar className="justify-content-end">
+            <NavLink strict exact to='/' key='/'>Home</NavLink>
+            <NavLink strict exact to='/about' key='/'>About</NavLink>
+            <NavLink strict exact to='/skills' key='/'>Skills</NavLink>
+            <NavLink strict exact to='/projects' key='/'>Projects</NavLink>
+            <NavLink strict exact to='/contact' key='/'>Contact</NavLink>
+          </Navbar>
           <Route render={({ location }) => {
             const { pathname, key } = location;
 
@@ -37,7 +45,7 @@ class App extends Component {
 
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />
-                    <Route path="/projects" component={Projects}/>
+                    <Route path="/projects" component={Projects} />
                     <Route path="/skills" component={Skills} />
                     <Route path="/contact" component={Contact} />
                     <Route path="/about" component={About} />
@@ -57,6 +65,7 @@ class App extends Component {
 
         </div>
       </BrowserRouter>
+    
     )
   }
 }
