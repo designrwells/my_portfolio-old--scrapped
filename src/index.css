@@ -121,6 +121,153 @@ nav a.active:before {
  	margin-bottom: 25px;
  	font: 2em 'Cairo', sans-serif;
  }
+ .oceanwave-one {
+  display: inline-block;
+  overflow: hidden;
+  left: -200px;
+  z-index: 9;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: -140px;
+  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
+          animation: oceanwave-right 5s ease-in-out infinite alternate both;
+}
+.oceanwave-two {
+  display: inline-block;
+  overflow: hidden;
+  left: 0px;
+  z-index: 5;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: -50px;
+  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
+          animation: oceanwave-left 7s ease-in-out infinite alternate both;
+}
+.oceanwave-three {
+  display: inline-block;
+  overflow: hidden;
+  left: -200px;
+  z-index: 4;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: 45px;
+  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
+          animation: oceanwave-right 5s ease-in-out infinite alternate both;
+}
+.oceanwave-four {
+  display: inline-block;
+  overflow: hidden;
+  left: 0px;
+  z-index: 3;
+  position: fixed;
+  width: 2850px;
+  margin: auto;
+  bottom: 95px;
+  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
+          animation: oceanwave-left 7s ease-in-out infinite alternate both;
+                     
+}
+.bottle {
+  width: 160px;
+  position: fixed;
+  margin: auto;
+  bottom: 10px;
+  left: 150px;
+  z-index: 5;
+  -webkit-animation: bottle-bob 3.2s ease-in-out infinite alternate both;
+          animation: bottle-bob 3.2s ease-in-out infinite alternate both;
+}
+.bottle:hover {
+  z-index: 11;
+}
+.bottle img {
+  -webkit-animation: bottle-float 4.5s ease-in-out infinite alternate both;
+          animation: bottle-float 4.5s ease-in-out infinite alternate both;
+}
+
+@-webkit-keyframes oceanwave-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+@keyframes oceanwave-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+@-webkit-keyframes oceanwave-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes oceanwave-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+@keyframes bottle-float {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+}
+@-webkit-keyframes bottle-float {
+  0% {
+    -webkit-transform: translateX(0, 0);
+            transform: translateX(0, 0);
+  }
+  100% {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+}
+@keyframes bottle-bob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes bottle-bob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
 /**
  * ----------------------------------------
  * animation pulsate-bck
@@ -241,7 +388,6 @@ nav a.active:before {
   max-width: 700px;
   margin: 0 auto;
   z-index: 3;
-  overflow: hidden;
 }
 
 .about-header {
@@ -286,7 +432,7 @@ nav a.active:before {
   max-width: 695px;
   text-align: center;
   margin: 0 auto;
-  z-index: 10;
+  z-index: 9;
   padding: 0 30px 10px 30px;
   margin-top: 3px;
   margin-bottom: -12px;
@@ -313,150 +459,3 @@ nav a.active:before {
 }
 
 
-.oceanwave-one {
-  display: inline-block;
-  overflow: hidden;
-  left: -200px;
-  z-index: 9;
-  position: fixed;
-  width: 2850px;
-  margin: auto;
-  bottom: -140px;
-  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
-          animation: oceanwave-right 5s ease-in-out infinite alternate both;
-}
-.oceanwave-two {
-  display: inline-block;
-  overflow: hidden;
-  left: 0px;
-  z-index: 5;
-  position: fixed;
-  width: 2850px;
-  margin: auto;
-  bottom: -50px;
-  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
-          animation: oceanwave-left 7s ease-in-out infinite alternate both;
-}
-.oceanwave-three {
-  display: inline-block;
-  overflow: hidden;
-  left: -200px;
-  z-index: 4;
-  position: fixed;
-  width: 2850px;
-  margin: auto;
-  bottom: 50px;
-  -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
-          animation: oceanwave-right 5s ease-in-out infinite alternate both;
-}
-.oceanwave-four {
-  display: inline-block;
-  overflow: hidden;
-  left: 0px;
-  z-index: 3;
-  position: fixed;
-  width: 2850px;
-  margin: auto;
-  bottom: 105px;
-  -webkit-animation: oceanwave-left 7s ease-in-out infinite alternate both;
-          animation: oceanwave-left 7s ease-in-out infinite alternate both;
-                     
-}
-.bottle {
-  width: 160px;
-  position: fixed;
-  margin: auto;
-  bottom: 10px;
-  left: 150px;
-  z-index: 5;
-  -webkit-animation: bottle-bob 3.2s ease-in-out infinite alternate both;
-          animation: bottle-bob 3.2s ease-in-out infinite alternate both;
-}
-.bottle:hover {
-  z-index: 7;
-}
-.bottle img {
-  -webkit-animation: bottle-float 4.5s ease-in-out infinite alternate both;
-          animation: bottle-float 4.5s ease-in-out infinite alternate both;
-}
-
-@-webkit-keyframes oceanwave-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-}
-@keyframes oceanwave-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-}
-@-webkit-keyframes oceanwave-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-}
-@keyframes oceanwave-right {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-  }
-}
-@keyframes bottle-float {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(130px);
-            transform: translateX(130px);
-  }
-}
-@-webkit-keyframes bottle-float {
-  0% {
-    -webkit-transform: translateX(0, 0);
-            transform: translateX(0, 0);
-  }
-  100% {
-    -webkit-transform: translateX(130px);
-            transform: translateX(130px);
-  }
-}
-@keyframes bottle-bob {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
-  }
-}
-@-webkit-keyframes bottle-bob {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
-  }
-}

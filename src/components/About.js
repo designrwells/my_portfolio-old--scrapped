@@ -60,13 +60,6 @@ class About extends Component {
 
 		    		<img src={octopusRight} className="about-block-right" ref={ img  => this.aboutContainerRight = img } />
 
-		    		<img src={waveFour} className="oceanwave-four" />
-		    		<img src={waveThree} className="oceanwave-three" />
-		    		<img src={waveTwo} className="oceanwave-two " />
-		    		<div className="bottle"><a href="/" alt="My Resume"><img src={bottle} /></a></div>
-		    		<img src={waveOne} className="oceanwave-one" />
-		    		
-
 			    </div>
 
 		    </div>

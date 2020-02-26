@@ -24,10 +24,28 @@ const getHomeTimeline = (node, delay) => {
   return timeline;
 }
 
+const getAboutTimeline = (node, delay) => {
+  const timeline = new Timeline({ paused: true });
+  const octopusLeftSide = node.querySelectorAll('.about-block-left');
+  const octopusRightSide = node.querySelectorAll('.about-block-right');
+
+  timeline
+    .from(node, 1, { display: 'none', autoAlpha: 0, delay })
+    .from(octopusLeftSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut } )
+    .from(octopusRightSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=0.275');
+
+  return timeline;
+}
+
 export const play = (pathname, node, appears) => {
   const delay = appears ? 0 : 0.5;
   let timeline
 
+  if (pathname === '/')
+    timeline = getHomeTimeline(node, delay);
+  else if (pathname === '/about')
+    timeline = getAboutTimeline(node, delay);
+  else 
     timeline = getDefaultTimeline(node, delay);
 
   window
