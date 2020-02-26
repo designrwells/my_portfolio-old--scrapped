@@ -15,11 +15,15 @@ const getDefaultTimeline = (node, delay) => {
 
 const getHomeTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
-  const texts = node.querySelectorAll('h1 > div');
+  const text1 = node.querySelectorAll('#intro-text-one');
+  const text2 = node.querySelectorAll('#intro-text-two');
+  const text3 = node.querySelectorAll('#intro-text-three');
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
-    .staggerFrom(texts, 0.375, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 0.125);
+    .staggerFrom(text1, .7, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 2 )
+    .staggerFrom(text2, 1, { autoAlpha: 0, x: -55, ease: Power1.easeOut }, 5, 3)
+    .staggerFrom(text3, 3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5, 5 );
 
   return timeline;
 }
