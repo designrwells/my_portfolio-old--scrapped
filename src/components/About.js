@@ -20,8 +20,8 @@ class About extends Component {
 	
 	componentDidMount() {
 		this.aboutTween = new TimelineLite({ paused:true })
-			.to(this.aboutContainerLeft, 1, { y: 1000, display: "none" })
-			.to(this.aboutContainerRight, 1, { y: 1000, display: "none" }, '-=1')
+			.to(this.aboutContainerLeft, .5, { y: 1000, display: "none" })
+			.to(this.aboutContainerRight, .5, { y: 1000, display: "none" }, '-=.5')
 			.to(this.ropeLineTop, 1.5, { opacity: .8, y: -20 }, '-=.7' )
 			.to(this.ropeLineBottom, 1.5, { opacity: .8, y: -20 }, '-=1.5' )
 			.to(this.aboutHeader, 2, { opacity: 1, y: 10 }, '-=.4' )
