@@ -2,15 +2,27 @@ import { TimelineMax as Timeline, Power1 } from 'gsap';
 
 const getHomeTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
-  const bodyHome = document.querySelector('body');
+  const body = document.querySelector('body');
+  const sun = node.querySelector('#sun');
+  const wave1 = document.querySelector('#oceanwave-one');
+  const wave2 = document.querySelector('#oceanwave-two');
+  const wave3 = document.querySelector('#oceanwave-three');
+  const wave4 = document.querySelector('#oceanwave-four');
+  const wave5 = document.querySelector('#oceanwave-five');
   const text1 = node.querySelector('#intro-text-one');
   const text2 = node.querySelector('#intro-text-two');
   const text3 = node.querySelector('#intro-text-three');
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
-    .to(bodyHome, 2, { backgroundColor: '#444444' }, '-=2')
-    .staggerFrom(text1, .7, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 2 )
+    .from(sun, 1, { y: 400 }, '-=1')
+    .to(body, 2, { backgroundColor: '#E08724' }, '-=2')
+    .to(wave5, 2, { fill: '#FBFCBA' }, '-=2')
+    .to(wave4, 2, { fill: '#F5C649' }, '-=2')
+    .to(wave3, 2, { fill: '#E08724' }, '-=2')
+    .to(wave2, 2, { fill: '#BE641C' }, '-=2')
+    .to(wave1, 2, { fill: '#4C230C' }, '-=2')
+    .staggerFrom(text1, .3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5 )
     .staggerFrom(text2, 1, { autoAlpha: 0, x: -55, ease: Power1.easeOut }, 5, 3)
     .staggerFrom(text3, 3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5, 5 );
 
@@ -19,18 +31,51 @@ const getHomeTimeline = (node, delay) => {
 
 const getAboutTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
+  const wave1 = document.querySelector('#oceanwave-one');
+  const wave2 = document.querySelector('#oceanwave-two');
+  const wave3 = document.querySelector('#oceanwave-three');
+  const wave4 = document.querySelector('#oceanwave-four');
+  const wave5 = document.querySelector('#oceanwave-five');
   const octopusLeftSide = node.querySelector('.about-block-left');
   const octopusRightSide = node.querySelector('.about-block-right');
-  const bodyAbout = document.querySelector('body');
+  const body = document.querySelector('body');
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
-    .to(bodyAbout, 2, { backgroundColor: '#0C0C21' }, '-=2' )
+    .to(body, 2, { backgroundColor: '#3F223A' }, '-=2' )
+    .to(wave5, 2, { fill: '#1F152A' }, '-=2')
+    .to(wave4, 2, { fill: '#C65A3A' }, '-=2')
+    .to(wave3, 2, { fill: '#7E393C' }, '-=2')
+    .to(wave2, 2, { fill: '#362960' }, '-=2')
+    .to(wave1, 2, { fill: '#09123B' }, '-=2')
     .from(octopusLeftSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut } )
     .from(octopusRightSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=0.275');
 
   return timeline;
 }
+
+
+const getSkillsTimeline = (node, delay) => {
+  const timeline = new Timeline({ paused: true });
+  const wave1 = document.querySelector('#oceanwave-one');
+  const wave2 = document.querySelector('#oceanwave-two');
+  const wave3 = document.querySelector('#oceanwave-three');
+  const wave4 = document.querySelector('#oceanwave-four');
+  const wave5 = document.querySelector('#oceanwave-five');
+  const body = document.querySelector('body');
+
+  timeline
+    .from(node, 1, { display: 'none', autoAlpha: 0, delay })
+    .to(body, 2, { backgroundColor: '#040D1C' }, '-=2' )
+    .to(wave5, 2, { fill: '#0A2C3D' }, '-=2')
+    .to(wave4, 2, { fill: '##145163' }, '-=2')
+    .to(wave3, 2, { fill: '#37768A' }, '-=2')
+    .to(wave2, 2, { fill: '#5090A6' }, '-=2')
+    .to(wave1, 2, { fill: '#8FD7EA' }, '-=2');
+
+  return timeline;
+}
+
 
 export const play = (pathname, node, appears) => {
   const delay = appears ? 0 : 0.5;
@@ -40,6 +85,8 @@ export const play = (pathname, node, appears) => {
     timeline = getHomeTimeline(node, delay);
   else if (pathname === '/about')
     timeline = getAboutTimeline(node, delay);
+  else if (pathname === '/skills')
+    timeline = getSkillsTimeline(node, delay);
   else
     timeline = getHomeTimeline(node, delay);
 
