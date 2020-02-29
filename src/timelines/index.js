@@ -15,15 +15,15 @@ const getHomeTimeline = (node, delay) => {
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
-    .from(sun, 1, { y: 400 }, '-=1')
+    .from(sun, 3, { y: 800 }, '-=2.2')
     .to(body, 2, { backgroundColor: '#E08724' }, '-=2')
     .to(wave5, 2, { fill: '#FBFCBA' }, '-=2')
     .to(wave4, 2, { fill: '#F5C649' }, '-=2')
     .to(wave3, 2, { fill: '#E08724' }, '-=2')
     .to(wave2, 2, { fill: '#BE641C' }, '-=2')
     .to(wave1, 2, { fill: '#4C230C' }, '-=2')
-    .staggerFrom(text1, .3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5 )
-    .staggerFrom(text2, 1, { autoAlpha: 0, x: -55, ease: Power1.easeOut }, 5, 3)
+    .staggerFrom(text1, .3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 4 )
+    .staggerFrom(text2, 1, { autoAlpha: 0, x: -55, ease: Power1.easeOut }, 5, 4)
     .staggerFrom(text3, 3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5, 5 );
 
   return timeline;
@@ -72,7 +72,7 @@ const getSkillsTimeline = (node, delay) => {
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
     .to(body, 2, { backgroundColor: '#040D1C' }, '-=2')
-    .from(moon, 3, { y: 800 }, '-=1.75')
+    .from(moon, 3, { y: 1400 }, '-=1.75')
     .to(wave5, 2, { fill: '#0A2C3D' }, '-=2')
     .to(wave4, 2, { fill: '##145163' }, '-=2')
     .to(wave3, 2, { fill: '#37768A' }, '-=2')
