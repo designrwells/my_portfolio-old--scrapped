@@ -1,4 +1,4 @@
-import { TimelineMax as Timeline, Power1 } from 'gsap';
+import { TimelineMax as Timeline, Power1, Linear } from 'gsap';
 
 const getHomeTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
@@ -36,6 +36,8 @@ const getAboutTimeline = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const cloud1 = node.querySelector('#cloud-one');
+  const cloud2 = node.querySelector('#cloud-two');
   const octopusLeftSide = node.querySelector('.about-block-left');
   const octopusRightSide = node.querySelector('.about-block-right');
   const body = document.querySelector('body');
@@ -48,8 +50,10 @@ const getAboutTimeline = (node, delay) => {
     .to(wave3, 2, { fill: '#7E393C' }, '-=2')
     .to(wave2, 2, { fill: '#362960' }, '-=2')
     .to(wave1, 2, { fill: '#09123B' }, '-=2')
-    .from(octopusLeftSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut } )
-    .from(octopusRightSide, 0.275, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=0.275');
+    .to(cloud1, 35, { x: 700 }, '-=2')
+    .to(cloud2, 35, { x: 500 }, '-=35')
+    .from(octopusLeftSide, 0.4, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=32.4')
+    .from(octopusRightSide, 0.4, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=32.4');
 
   return timeline;
 }
@@ -63,10 +67,12 @@ const getSkillsTimeline = (node, delay) => {
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
   const body = document.querySelector('body');
+  const moon = node.querySelector('#moon');
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
-    .to(body, 2, { backgroundColor: '#040D1C' }, '-=2' )
+    .to(body, 2, { backgroundColor: '#040D1C' }, '-=2')
+    .from(moon, 3, { y: 800 }, '-=1.75')
     .to(wave5, 2, { fill: '#0A2C3D' }, '-=2')
     .to(wave4, 2, { fill: '##145163' }, '-=2')
     .to(wave3, 2, { fill: '#37768A' }, '-=2')

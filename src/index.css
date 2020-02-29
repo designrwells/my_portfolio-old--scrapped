@@ -120,14 +120,17 @@ nav a.active:before {
  	margin-bottom: 25px;
  	font: 2em 'Cairo', sans-serif;
  }
- #oceanwave-one {
-  display: inline-block;
-  overflow: hidden;
-  left: -200px;
-  z-index: 9;
+.oceanwave {
   position: fixed;
+  display: inline-block;
   width: 3400px;
   margin: auto;
+  overflow: hidden;
+  filter: drop-shadow(7px 0px 5px rgba(0, 0, 0, .6));
+ }
+ #oceanwave-one {
+  left: -200px;
+  z-index: 9;
   bottom: -100px;
   opacity: .7;
   pointer-events: none;
@@ -135,52 +138,32 @@ nav a.active:before {
           animation: oceanwave-right 5s ease-in-out infinite alternate both;
 }
 #oceanwave-two {
-  display: inline-block;
-  overflow: hidden;
   left: 0px;
   z-index: 5;
-  position: fixed;
-  width: 3400px;
-  margin: auto;
   bottom: -30px;
   opacity: .9;
   -webkit-animation: oceanwave-left 5.5s ease-in-out infinite alternate both;
           animation: oceanwave-left 5.5s ease-in-out infinite alternate both;
 }
 #oceanwave-three {
-  display: inline-block;
-  overflow: hidden;
   left: -200px;
   z-index: 4;
-  position: fixed;
-  width: 3400px;
-  margin: auto;
   bottom: 25px;
   opacity: .9;
   -webkit-animation: oceanwave-right 6s ease-in-out infinite alternate both;
           animation: oceanwave-right 6s ease-in-out infinite alternate both;
 }
 #oceanwave-four {
-  display: inline-block;
-  overflow: hidden;
   left: 0px;
   z-index: 3;
-  position: fixed;
-  width: 3400px;
-  margin: auto;
   bottom: 75px;
   opacity: .9;
   -webkit-animation: oceanwave-left 6.3s ease-in-out infinite alternate both;
           animation: oceanwave-left 6.3s ease-in-out infinite alternate both;                  
 }
 #oceanwave-five {
-  display: inline-block;
-  overflow: hidden;
   left: -200px;
   z-index: 3;
-  position: fixed;
-  width: 3400px;
-  margin: auto;
   bottom: 110px;
   opacity: .9;
   -webkit-animation: oceanwave-right 7s ease-in-out infinite alternate both;
@@ -193,6 +176,7 @@ nav a.active:before {
   bottom: 35px;
   left: 150px;
   z-index: 5;
+  filter: drop-shadow(4px 0px 5px rgba(0, 0, 0, .5));
   -webkit-animation: bottle-bob 3.2s ease-in-out infinite alternate both;
           animation: bottle-bob 3.2s ease-in-out infinite alternate both;
 }
@@ -397,4 +381,29 @@ nav a.active:before {
   margin: 0 auto;
 }
 
+#cloud-one {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 425px;
+  fill: #0F152A;
+  z-index: 1;
+}
+#cloud-two {
+  position: absolute;
+  top: 80px;
+  left: -150px;
+  width: 400px;
+  fill: #0F152A;
+  z-index: 2;
+}
 
+/*--------SKILLS PAGE-------*/
+#moon {
+  position: fixed;
+  fill: #fff;
+  width: 400px;
+  right: 100px;
+  top: 90px;
+  z-index: 1;
+}
