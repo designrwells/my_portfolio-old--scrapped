@@ -158,6 +158,7 @@ nav a.active:before {
   z-index: 3;
   bottom: 75px;
   opacity: .9;
+  pointer-events: none;
   -webkit-animation: oceanwave-left 6.3s ease-in-out infinite alternate both;
           animation: oceanwave-left 6.3s ease-in-out infinite alternate both;                  
 }
@@ -166,6 +167,7 @@ nav a.active:before {
   z-index: 3;
   bottom: 110px;
   opacity: .9;
+  pointer-events: none;
   -webkit-animation: oceanwave-right 7s ease-in-out infinite alternate both;
           animation: oceanwave-right 7s ease-in-out infinite alternate both;                
 }
@@ -400,79 +402,71 @@ nav a.active:before {
 
 /*--------SKILLS PAGE-------*/
 .sky-wrapper {
-  position: flex;
-  width: 100%;
+  display: flex;
 }
-.star-wrapper {
-  position: relative;
-  float: left;
-  max-width: 100%;
-  margin-bottom: 25%
+.stars-wrapper {
+  min-width: 60%;
+  height: 70%;
+  display: flex;
 }
 .moon-wrapper {
-  float: right;
+  width: 1150px;
+  margin: 28px 3% 0 0;
 }
 #moon {
-  position: fixed;
-  fill: #fff;
-  width: 400px;
-  left: 75%;
-  top: 100px;
-  margin-right: 100px;
-  z-index: 1;
-}
-.star-type-one {
   position: relative;
+  float: right;
+  fill: #fff;
+  width: 100%;
+  max-width: 500px;
+  z-index: 1;
+  pointer-events: none;
+}
+.star-wrapper {
+  width: 5%;
+}
+.star-type {
+  position: relative;
+  width: 55px;
   fill: #fff;
   z-index: 1;
   animation: glowing 5000ms infinite;
+  transition: width 1s;
+  cursor: pointer;
 }
-.star-type-one:hover {
-  width: 45;
-  filter: drop-shadow(0 0 15px rgba(255,255,255,1));
-}
-.star-type-two {
-  position: relative;
-  fill: #fff;
-  z-index: 1;
-  top: 50px;
-  animation: glowing 6000ms infinite;
-}
-.star-type-two:hover {
-  width: 45;
+.star-type:hover {
+  width: 65px;
   filter: drop-shadow(0 0 15px rgba(255,255,255,1));
 }
 #star-one {
-  width: 40px;
-  margin: 0px 0 475px 100px;
+  padding: 6px;
+  margin: 15vh 0 0 3vw;
 }
 #star-two {
-  width: 45px;
-  margin: 165px 0 0 110px;
+  padding: 8px;
+  margin: 29vh 0 0 6vw;
 }
 #star-three {
-  width: 55px;
-  margin: 0px 0 195px 185px;
+  padding: 7px;
+  margin: 2vh 0 0 8vw;
 }
 #star-four {
-  width: 35px;
-  margin: 40px 0 0 15px;
+  margin: 40vh 0 0 15vw;
 }
 #star-five {
-  width: 55px;
-  margin: 200px 0 0 160px;
+  padding: 5px;
+  margin: 14vh 0 0 20vw;
 }
 #star-six {
-  width: 35px;
-  margin: 0px 0 270px 105px;
+  margin: 5vh 0 0 25vw;
 }
 #star-seven {
-  width: 35px;
-  margin: 0 0 420px 75px;
+  margin: 23vh 0 0 34vw;
 }
 #star-eight {
-  width: 35px;
-  margin: 210px 0 0 55px;
+  margin: 35vh 0 0 36vw;
+}#star-nine {
+  margin: 15vh 0 0 45vw;
 }
 
 @keyframes glowing {
