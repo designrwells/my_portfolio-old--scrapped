@@ -68,11 +68,27 @@ const getSkillsTimeline = (node, delay) => {
   const wave5 = document.querySelector('#oceanwave-five');
   const body = document.querySelector('body');
   const moon = node.querySelector('#moon');
+  const star1 = node.querySelector('#star-one');
+  const star2 = node.querySelector('#star-two');
+  const star3 = node.querySelector('#star-three');
+  const star4 = node.querySelector('#star-four');
+  const star5 = node.querySelector('#star-five');
+  const star6 = node.querySelector('#star-six');
+  const star7 = node.querySelector('#star-seven');
+  const star8 = node.querySelector('#star-eight');
 
   timeline
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
     .to(body, 2, { backgroundColor: '#040D1C' }, '-=2')
     .from(moon, 3, { y: 1400 }, '-=1.75')
+    .from(star1, 3, { y:-150 }, '-=3')
+    .from(star2, 3, { y:-940 }, '-=3')
+    .from(star3, 3, { y:-500 }, '-=3')
+    .from(star4, 3, { y:-860 }, '-=3')
+    .from(star5, 3, { y:-740 }, '-=3')
+    .from(star6, 3, { y:-920 }, '-=3')
+    .from(star7, 3, { y:-360 }, '-=3')
+    .from(star8, 3, { y:-960 }, '-=3')
     .to(wave5, 2, { fill: '#0A2C3D' }, '-=2')
     .to(wave4, 2, { fill: '##145163' }, '-=2')
     .to(wave3, 2, { fill: '#37768A' }, '-=2')
