@@ -1,6 +1,5 @@
 body {
   background: #444;
-  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,7 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -131,7 +129,7 @@ nav a.active:before {
  #oceanwave-one {
   left: -200px;
   z-index: 9;
-  bottom: -100px;
+  bottom: -136px;
   opacity: .7;
   pointer-events: none;
   -webkit-animation: oceanwave-right 5s ease-in-out infinite alternate both;
@@ -140,7 +138,7 @@ nav a.active:before {
 #oceanwave-two {
   left: 0px;
   z-index: 5;
-  bottom: -30px;
+  bottom: -70px;
   opacity: .9;
   -webkit-animation: oceanwave-left 5.5s ease-in-out infinite alternate both;
           animation: oceanwave-left 5.5s ease-in-out infinite alternate both;
@@ -148,7 +146,7 @@ nav a.active:before {
 #oceanwave-three {
   left: -200px;
   z-index: 4;
-  bottom: 25px;
+  bottom: -15px;
   opacity: .9;
   -webkit-animation: oceanwave-right 6s ease-in-out infinite alternate both;
           animation: oceanwave-right 6s ease-in-out infinite alternate both;
@@ -156,7 +154,7 @@ nav a.active:before {
 #oceanwave-four {
   left: 0px;
   z-index: 3;
-  bottom: 75px;
+  bottom: 30px;
   opacity: .9;
   pointer-events: none;
   -webkit-animation: oceanwave-left 6.3s ease-in-out infinite alternate both;
@@ -165,7 +163,7 @@ nav a.active:before {
 #oceanwave-five {
   left: -200px;
   z-index: 3;
-  bottom: 110px;
+  bottom: 65px;
   opacity: .9;
   pointer-events: none;
   -webkit-animation: oceanwave-right 7s ease-in-out infinite alternate both;
@@ -175,8 +173,8 @@ nav a.active:before {
   width: 160px;
   position: fixed;
   margin: auto;
-  bottom: 35px;
-  left: 150px;
+  bottom: 20px;
+  left: 120px;
   z-index: 5;
   filter: drop-shadow(4px 0px 5px rgba(0, 0, 0, .5));
   -webkit-animation: bottle-bob 3.2s ease-in-out infinite alternate both;
@@ -403,6 +401,7 @@ nav a.active:before {
 /*--------SKILLS PAGE-------*/
 .sky-wrapper {
   display: flex;
+  height: 600px;
 }
 .stars-wrapper {
   min-width: 60%;
@@ -416,14 +415,14 @@ nav a.active:before {
 #moon {
   position: relative;
   float: right;
-  fill: #fff;
+  fill: #f3f3d8;
   width: 100%;
   max-width: 500px;
   z-index: 1;
   pointer-events: none;
 }
 .star-wrapper {
-  width: 5%;
+  width: 6%;
 }
 .star-type {
   position: relative;
@@ -431,7 +430,7 @@ nav a.active:before {
   fill: #fff;
   z-index: 1;
   animation: glowing 5000ms infinite;
-  transition: width 1s;
+  transition: width .35s;
   cursor: pointer;
 }
 .star-type:hover {
@@ -444,29 +443,32 @@ nav a.active:before {
 }
 #star-two {
   padding: 8px;
-  margin: 29vh 0 0 6vw;
+  margin: 29vh 0 0 5vw;
 }
 #star-three {
   padding: 7px;
-  margin: 2vh 0 0 8vw;
+  margin: 2vh 0 0 7vw;
 }
 #star-four {
-  margin: 40vh 0 0 15vw;
+  margin: 40vh 0 0 14vw;
 }
 #star-five {
-  padding: 5px;
-  margin: 14vh 0 0 20vw;
+  padding: 10px;
+  margin: 14vh 0 0 19vw;
 }
 #star-six {
-  margin: 5vh 0 0 25vw;
+  padding: 3px;
+  margin: 5vh 0 0 24vw;
 }
 #star-seven {
-  margin: 23vh 0 0 34vw;
+  padding: 5px;
+  margin: 23vh 0 0 30vw;
 }
 #star-eight {
-  margin: 35vh 0 0 36vw;
+  margin: 35vh 0 0 32vw;
 }#star-nine {
-  margin: 15vh 0 0 45vw;
+  padding: 10px;
+  margin: 15vh 0 0 44vw;
 }
 
 @keyframes glowing {
