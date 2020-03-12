@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../css/about.css';
 import { CSSTransition, Transition, TransitionGroup } from 'react-transition-group';
 import { TimelineLite, CSSPlugin } from 'gsap';
 import octopusRight from '../images/octopus-right.png';

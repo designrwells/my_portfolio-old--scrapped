@@ -1,0 +1,91 @@
+/*--------ABOUT PAGE-------*/
+.about-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.about-header {
+  z-index: 8;
+  opacity: 0;
+  text-align: center;
+  position: relative;
+  font-family: 'IM Fell English SC';
+  font-size: 48px;
+  color: #eaeaea;
+  margin-top: -40px;
+  padding: 30px 10px 20px 10px;
+}
+.about-block-left {
+  display: block;
+  width: 50%;
+  min-width: 250px;
+  max-width: 380px;
+  height: auto;
+  margin: 25px auto;
+  position: absolute;
+  z-index: 5;
+  right: 50%;
+  top: 5%;
+  cursor: pointer;
+}
+.about-block-right {
+  display: block;
+  width: 50%;
+  min-width: 250px;
+  max-width: 380px;
+  height: auto;
+  margin: 25px auto;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 5%;
+  cursor: pointer;
+}
+.about-text-wrapper {
+  position: relative;
+  max-width: 695px;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 8;
+  pointer-events: none;
+  padding: 0 30px 10px 30px;
+  margin-top: 3px;
+  margin-bottom: -12px;
+  border-radius: 5px;
+}
+.about-text {
+  padding: 15px 0;
+  opacity: 0;
+  color: #fff;
+  font-size: 18px;
+  z-index: 9;
+  pointer-events: none;
+}
+.rope-line {
+  display: flex;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  max-width: 750px;
+  height: auto;
+  opacity: 0;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+#cloud-one {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 425px;
+  fill: #0F152A;
+  z-index: 1;
+}
+#cloud-two {
+  position: absolute;
+  top: 80px;
+  left: -150px;
+  width: 400px;
+  fill: #0F152A;
+  z-index: 2;
+}
