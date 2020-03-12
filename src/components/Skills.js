@@ -6,8 +6,9 @@ const Skills = () => {
 
 	  return (
 	    <div className="sky-wrapper">
-	    	<div className="stars-wrapper">
+	    	
 		    	{/*------stars------*/}
+		    <div className="star-group-wrapper">
 		    	<div className="star-wrapper">
 		    	 
 			    	<svg className="star-type" id="star-one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1258 998">

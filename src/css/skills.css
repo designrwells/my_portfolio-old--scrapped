@@ -1,20 +1,27 @@
 /*--------SKILLS PAGE-------*/
 .sky-wrapper {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   height: 600px;
 }
-.stars-wrapper {
-  min-width: 60%;
-  height: 70%;
+.star-group-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 .moon-wrapper {
-  width: 1150px;
-  margin: 28px 3% 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 30px 3% 0 0;
+  width: 50%;
 }
 #moon {
   position: relative;
-  float: right;
   fill: #f3f3d8;
   width: 100%;
   max-width: 500px;
@@ -22,10 +29,8 @@
   pointer-events: none;
 }
 .star-wrapper {
-  width: 6%;
 }
 .star-type {
-  position: relative;
   fill: #fff;
   z-index: 1;
   padding: 15px;
@@ -45,46 +50,51 @@
 }
 #star-one {
   width: 75px;
-  margin: 15vh 0 0 3vw;
+  margin: 15vh 0% 0 0%;
 }
 #star-two {
   width: 85px;
-  margin: 29vh 0 0 5vw;
+  margin: 29vh 0% 0 0%;
 }
 #star-three {
   width: 65px;
-  margin: 2vh 0 0 7vw;
+  margin: 2vh 0% 0 0%;
 }
 #star-four {
   width: 75px;
-  margin: 40vh 0 0 14vw;
+  margin: 40vh 0% 0 0%;
 }
 #star-five {
   width: 65px;
-  margin: 14vh 0 0 14vw;
+  margin: 14vh 0% 0 0%;
 }
 #star-six {
   width: 70px;
-  margin: 5vh 0 0 24vw;
+  margin: 5vh 0% 0 0%;
 }
 #star-seven {
   width: 75px;
-  margin: 23vh 0 0 30vw;
+  margin: 23vh 0 0 0;
 }
 #star-eight {
   width: 65px;
-  margin: 35vh 0 0 32vw;
+  margin: 35vh 0% 0 0%;
 }#star-nine {
   width: 80px;
-  margin: 15vh 0 0 44vw;
+  margin: 15vh 0% 0 0%;
 }
 
-#skill-one {
-  color: red;
+.skill-box {
+    background: #78DEE8;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    align-content: center;
+    margin: 0 0 20px 20px;
 }
 
 #star-one:hover ~ #skill-one {
- color: #fff;
+ visibility: visible;
 }
 @keyframes glowing {
   0% { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
