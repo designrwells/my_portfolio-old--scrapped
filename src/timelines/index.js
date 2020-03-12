@@ -100,6 +100,59 @@ const getSkillsTimeline = (node, delay) => {
   return timeline;
 }
 
+const getProjectsTimeline = (node, delay) => {
+  const timeline = new Timeline({ paused: true });
+  const wave1 = document.querySelector('#oceanwave-one');
+  const wave2 = document.querySelector('#oceanwave-two');
+  const wave3 = document.querySelector('#oceanwave-three');
+  const wave4 = document.querySelector('#oceanwave-four');
+  const wave5 = document.querySelector('#oceanwave-five');
+  const bottle = document.querySelector('.bottle');
+  const body = document.querySelector('body');
+
+  timeline
+    .from(node, 1, { display: 'none', autoAlpha: 0, delay })
+    .to(body, 1, { backgroundColor: '#777'}, '-=1')
+    .to(bottle, 1, { css:{left:"-260px", opacity: 0 }, ease: Power1.easeOut }, '-=.5')
+    .to(wave5, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
+    .to(wave4, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
+    .to(wave3, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
+    .to(wave2, 3, {css:{bottom:"1250px"}, fill: '#4ea9ff' }, '-=.2')
+    .to(wave1, 3, {css:{bottom:"1250px"}, fill: '#4ea9ff'}, '-=3');
+
+  return timeline;
+}
+
+const getProjectsExit = (node, delay) => {
+  const timeline = new Timeline({ paused: true });
+  const bottle = document.querySelector('.bottle');
+  const wave1 = document.querySelector('#oceanwave-one');
+  const wave2 = document.querySelector('#oceanwave-two');
+  const wave3 = document.querySelector('#oceanwave-three');
+  const wave4 = document.querySelector('#oceanwave-four');
+  const wave5 = document.querySelector('#oceanwave-five');
+  const body = document.querySelector('body');
+
+  timeline
+    .to(wave2, 1.5, { css:{bottom:"-70px"} }, )
+    .to(wave1, 1.5, { css:{bottom:"-136px"} }, '-=1.5')
+    .to(wave5, 2, { autoAlpha: 1, ease: Power1.easeOut }, )
+    .to(wave4, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
+    .to(wave3, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
+    
+    .to(bottle, 2, { css:{left:"120px", opacity: 1 }, autoAlpha: 1, ease: Power1.easeOut }, '-=2');
+
+  return timeline;
+}
+
+const getPageExit = (node, delay) => {
+  const timeline = new Timeline({ paused: true });
+
+  timeline
+    .to(node, 0.15, { autoAlpha: 0, ease: Power1.easeOut });
+    
+  return timeline;
+}
 
 export const play = (pathname, node, appears) => {
   const delay = appears ? 0 : 0.5;
@@ -111,6 +164,8 @@ export const play = (pathname, node, appears) => {
     timeline = getAboutTimeline(node, delay);
   else if (pathname === '/skills')
     timeline = getSkillsTimeline(node, delay);
+  else if (pathname === '/projects')
+    timeline = getProjectsTimeline(node, delay);
   else
     timeline = getHomeTimeline(node, delay);
 
@@ -119,9 +174,13 @@ export const play = (pathname, node, appears) => {
     .then(() => requestAnimationFrame(() => timeline.play()))
 }
 
-export const exit = (node) => {
-  const timeline = new Timeline({ paused: true });
+export const exit = (pathname, node) => {
+  let timeline
 
-  timeline.to(node, 0.15, { autoAlpha: 0, ease: Power1.easeOut });
+  if (pathname === '/projects')
+    timeline = getProjectsExit(node);
+
+  else 
+   timeline= getPageExit(node);
   timeline.play();
 }

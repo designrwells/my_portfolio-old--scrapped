@@ -114,14 +114,14 @@
             transform: translateY(10px) translateX(70px);
   }
   100% {
-    -webkit-transform: translateY(-50px) translateX(70px);
-            transform: translateY(-50px) translateX(70px);
+    -webkit-transform: translateY(-40px) translateX(70px);
+            transform: translateY(-40px) translateX(70px);
   }
 }
 @keyframes slide-tr {
   0% {
     -webkit-transform: translateY(10px) translateX(70px);
-            transform: translateY(10px) translateX(75px);
+            transform: translateY(10px) translateX(70px);
             opacity: 0;
   }
   100% {

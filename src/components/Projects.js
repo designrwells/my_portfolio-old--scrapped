@@ -9,7 +9,7 @@ class Projects extends Component {
       // Render a Thumbnail component
       <div className="body-wrapper">
         <h1 className="header">PROJECTS</h1>
-        <CardDeck>
+        {/*<CardDeck>
           <ProjectItem
             link="/ulysses"
             image="http://darrinwells.com/img/ulysses.jpg"
@@ -39,7 +39,7 @@ class Projects extends Component {
             title="Airbnb Experiences"
             category="Website"
           />
-        </CardDeck>
+        </CardDeck>*/}
       </div>
       
     )
