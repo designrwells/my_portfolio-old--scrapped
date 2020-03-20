@@ -9,6 +9,8 @@ const getHomeTimeline = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const underwater1 = document.querySelector('#underwater-one');
+  const underwater2 = document.querySelector('#underwater-two');
   const text1 = node.querySelector('#intro-text-one');
   const text2 = node.querySelector('#intro-text-two');
   const text3 = node.querySelector('#intro-text-three');
@@ -22,6 +24,8 @@ const getHomeTimeline = (node, delay) => {
     .to(wave3, 2, { fill: '#E08724' }, '-=2')
     .to(wave2, 2, { fill: '#BE641C' }, '-=2')
     .to(wave1, 2, { fill: '#4C230C' }, '-=2')
+    .to(underwater2, 2, { backgroundColor: '#BE641C' }, '-=2')
+    .to(underwater1, 2, { backgroundColor: '#4C230C' }, '-=2')
     .staggerFrom(text1, .3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 4 )
     .staggerFrom(text2, 1, { autoAlpha: 0, x: -55, ease: Power1.easeOut }, 5, 4)
     .staggerFrom(text3, 3, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 5, 5 );
@@ -36,6 +40,8 @@ const getAboutTimeline = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const underwater1 = document.querySelector('#underwater-one');
+  const underwater2 = document.querySelector('#underwater-two');
   const cloud1 = node.querySelector('#cloud-one');
   const cloud2 = node.querySelector('#cloud-two');
   const octopusLeftSide = node.querySelector('.about-block-left');
@@ -50,6 +56,8 @@ const getAboutTimeline = (node, delay) => {
     .to(wave3, 2, { fill: '#7E393C' }, '-=2')
     .to(wave2, 2, { fill: '#362960' }, '-=2')
     .to(wave1, 2, { fill: '#09123B' }, '-=2')
+    .to(underwater2, 2, { backgroundColor: '#362960' }, '-=2')
+    .to(underwater1, 2, { backgroundColor: '#09123B' }, '-=2')
     .to(cloud1, 35, { x: 700 }, '-=2')
     .to(cloud2, 35, { x: 500 }, '-=35')
     .from(octopusLeftSide, 0.4, { autoAlpha: 0, y: 650 , ease: Power1.easeOut }, '-=32.4')
@@ -66,6 +74,8 @@ const getSkillsTimeline = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const underwater1 = document.querySelector('#underwater-one');
+  const underwater2 = document.querySelector('#underwater-two');
   const body = document.querySelector('body');
   const moon = node.querySelector('#moon');
   const star1 = node.querySelector('#star-one');
@@ -95,7 +105,9 @@ const getSkillsTimeline = (node, delay) => {
     .to(wave4, 2, { fill: '##145163' }, '-=2')
     .to(wave3, 2, { fill: '#37768A' }, '-=2')
     .to(wave2, 2, { fill: '#5090A6' }, '-=2')
-    .to(wave1, 2, { fill: '#8FD7EA' }, '-=2');
+    .to(wave1, 2, { fill: '#8FD7EA' }, '-=2')
+    .to(underwater2, 2, { backgroundColor: '#5090A6' }, '-=2')
+    .to(underwater1, 2, { backgroundColor: '#8FD7EA' }, '-=2');
 
   return timeline;
 }
@@ -107,6 +119,10 @@ const getProjectsTimeline = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const underwater1 = document.querySelector('#underwater-one');
+  const underwater2 = document.querySelector('#underwater-two');
+  const underwaterWrap1 = document.querySelector('#underwater-wrapper-one');
+  const underwaterWrap2 = document.querySelector('#underwater-wrapper-two');
   const bottle = document.querySelector('.bottle');
   const body = document.querySelector('body');
 
@@ -117,8 +133,8 @@ const getProjectsTimeline = (node, delay) => {
     .to(wave5, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
     .to(wave4, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
     .to(wave3, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
-    .to(wave2, 3, {css:{bottom:"1250px"}, fill: '#4ea9ff' }, '-=.2')
-    .to(wave1, 3, {css:{bottom:"1250px"}, fill: '#4ea9ff'}, '-=3');
+    .to(underwaterWrap1, 3, {css:{bottom:"-800px"} })
+    .to(underwaterWrap2, 3, {css:{bottom:"-800px"} }, '-=3');
 
   return timeline;
 }
@@ -131,6 +147,8 @@ const getProjectsExit = (node, delay) => {
   const wave3 = document.querySelector('#oceanwave-three');
   const wave4 = document.querySelector('#oceanwave-four');
   const wave5 = document.querySelector('#oceanwave-five');
+  const underwaterWrap1 = document.querySelector('#underwater-wrapper-one');
+  const underwaterWrap2 = document.querySelector('#underwater-wrapper-two');
   const body = document.querySelector('body');
 
   timeline
@@ -139,7 +157,8 @@ const getProjectsExit = (node, delay) => {
     .to(wave5, 2, { autoAlpha: 1, ease: Power1.easeOut }, )
     .to(wave4, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
     .to(wave3, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
-    
+    .to(underwaterWrap1, 3, {css:{bottom:"-2120px"} }, '-=3')
+    .to(underwaterWrap2, 3, {css:{bottom:"-2055px"} }, '-=3')
     .to(bottle, 2, { css:{left:"120px", opacity: 1 }, autoAlpha: 1, ease: Power1.easeOut }, '-=2');
 
   return timeline;
