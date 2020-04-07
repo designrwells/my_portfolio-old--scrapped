@@ -130,11 +130,16 @@ const getProjectsTimeline = (node, delay) => {
     .from(node, 1, { display: 'none', autoAlpha: 0, delay })
     .to(body, 1, { backgroundColor: '#777'}, '-=1')
     .to(bottle, 1, { css:{left:"-260px", opacity: 0 }, ease: Power1.easeOut }, '-=.5')
-    .to(wave5, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
-    .to(wave4, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
-    .to(wave3, 1, { autoAlpha: 0, ease: Power1.easeOut }, '-=1')
-    .to(underwaterWrap1, 3, {css:{bottom:"-800px"} })
-    .to(underwaterWrap2, 3, {css:{bottom:"-800px"} }, '-=3');
+    .to(wave2, .01, { css:{filter: 'drop-shadow(0px 0px 0px rgba(0,0,0,.0))'}, ease: Power1.easeOut})
+    .to(wave1, .01, { css:{filter: 'drop-shadow(0px 0px 0px rgba(0,0,0,.0))'}, ease: Power1.easeOut}, '-=.01')
+    
+    .to(wave5, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
+    .to(wave4, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
+    .to(wave3, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
+    .to(underwaterWrap1, 1.5, {css:{bottom:"-800px"} })
+    .to(underwaterWrap2, 1.5, {css:{bottom:"-800px"} }, '-=1.5')
+    ;
+
 
   return timeline;
 }
@@ -152,13 +157,15 @@ const getProjectsExit = (node, delay) => {
   const body = document.querySelector('body');
 
   timeline
-    .to(wave2, 1.5, { css:{bottom:"-70px"} }, )
-    .to(wave1, 1.5, { css:{bottom:"-136px"} }, '-=1.5')
-    .to(wave5, 2, { autoAlpha: 1, ease: Power1.easeOut }, )
-    .to(wave4, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
-    .to(wave3, 2, { autoAlpha: 1, ease: Power1.easeOut }, '-=2')
-    .to(underwaterWrap1, 3, {css:{bottom:"-2120px"} }, '-=3')
-    .to(underwaterWrap2, 3, {css:{bottom:"-2055px"} }, '-=3')
+    .to(underwaterWrap1, 2, {css:{bottom:"-2120px"} })
+    .to(underwaterWrap2, 2, {css:{bottom:"-2055px"} }, '-=2')
+    .to(wave2, 1.5, { css:{filter: 'drop-shadow(7px 0px 5px rgba(0,0,0,.6))'}}, '-=1.5' )
+    .to(wave1, 1.5, { css:{filter: 'drop-shadow(7px 0px 5px rgba(0,0,0,.6))'}}, '-=1.5')
+    .to(wave5, 1, { autoAlpha: 1, ease: Power1.easeOut } )
+    .to(wave4, 1, { autoAlpha: 1, ease: Power1.easeOut }, '-=1')
+    .to(wave3, 1, { autoAlpha: 1, ease: Power1.easeOut }, '-=1')
+
+
     .to(bottle, 2, { css:{left:"120px", opacity: 1 }, autoAlpha: 1, ease: Power1.easeOut }, '-=2');
 
   return timeline;

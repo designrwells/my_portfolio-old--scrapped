@@ -95,12 +95,14 @@
     padding: 5px 13px;
     z-index: 1;
     border-radius: 5px;
-    align-content: center;
+    align-content: left;
     -webkit-transform: translateX(65px);
     transform: translateX(65px);
     text-transform: uppercase;
 }
-
+.btn {
+  text-decoration: none !important;
+}
 .star-type:hover ~ .skill-box {
  opacity: 1;
  z-index: 1;

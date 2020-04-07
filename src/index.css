@@ -191,7 +191,7 @@ nav a.active:before {
   z-index: 9;
   width: 100%;
   height: 2000px;
-  margin-top: -18px;
+  margin-top: -17px;
 }
 #underwater-two {
   display: block;
@@ -200,7 +200,7 @@ nav a.active:before {
   z-index: 9;
   width: 100%;
   height: 2000px;
-  margin-top: -18px;
+  margin-top: -17px;
 }
 #underwater-wrapper-one {
   position: fixed;
