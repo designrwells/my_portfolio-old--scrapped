@@ -132,7 +132,6 @@ const getProjectsTimeline = (node, delay) => {
     .to(bottle, 1, { css:{left:"-260px", opacity: 0 }, ease: Power1.easeOut }, '-=.5')
     .to(wave2, .01, { css:{filter: 'drop-shadow(0px 0px 0px rgba(0,0,0,.0))'}, ease: Power1.easeOut})
     .to(wave1, .01, { css:{filter: 'drop-shadow(0px 0px 0px rgba(0,0,0,.0))'}, ease: Power1.easeOut}, '-=.01')
-    
     .to(wave5, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
     .to(wave4, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
     .to(wave3, .5, { autoAlpha: 0, ease: Power1.easeOut }, '-=.5')
@@ -161,7 +160,7 @@ const getProjectsExit = (node, delay) => {
     .to(underwaterWrap2, 2, {css:{bottom:"-2055px"} }, '-=2')
     .to(wave2, 1.5, { css:{filter: 'drop-shadow(7px 0px 5px rgba(0,0,0,.6))'}}, '-=1.5' )
     .to(wave1, 1.5, { css:{filter: 'drop-shadow(7px 0px 5px rgba(0,0,0,.6))'}}, '-=1.5')
-    .to(wave5, 1, { autoAlpha: 1, ease: Power1.easeOut } )
+    .to(wave5, 1, { autoAlpha: 1, ease: Power1.easeOut }, '-=.5' )
     .to(wave4, 1, { autoAlpha: 1, ease: Power1.easeOut }, '-=1')
     .to(wave3, 1, { autoAlpha: 1, ease: Power1.easeOut }, '-=1')
 
